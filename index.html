@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Contact Details -->
+    <div class="contact-details">
+      <a href="https://wa.me/6235279156" target="_blank" class="contact-button">WhatsApp</a>
+      <a href="https://www.instagram.com/unnikrishnnaann/" target="_blank" class="contact-button">Instagram</a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank" class="contact-button">LinkedIn</a>
+    </div>
+
+    <!-- Profile Photo -->
+    <div class="photo">
+      <img src="p1.jpg" alt="Profile Photo">
+    </div>
+
+    <!-- Message -->
+    <div class="message">
+      <p><strong>Important message:</strong> Please play the voice clip.</p>
+    </div>
+
+    <!-- Voice Clip -->
+    <div class="voice-clip">
+      <audio id="voiceClip" controls src="lachuzz.mp3"></audio>
+    </div>
+    
+    <!-- Navigation Buttons -->
+    <div class="buttons">
+      <button onclick="navigateTo('b3.html')">Personal</button>
+      <button onclick="navigateTo('g1.html')">Gallery</button>
+      <button onclick="navigateTo('b1.html')">My Details</button>
+    </div>
+  </div>
+
+  <script>
+    const voiceClip = document.getElementById("voiceClip");
+
+    function playVoiceClip() {
+      voiceClip.play().catch(error => console.error('Error playing audio:', error));
+    }
+
+    function stopVoiceClip() {
+      voiceClip.pause();
+      voiceClip.currentTime = 0;
+    }
+  </script>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
